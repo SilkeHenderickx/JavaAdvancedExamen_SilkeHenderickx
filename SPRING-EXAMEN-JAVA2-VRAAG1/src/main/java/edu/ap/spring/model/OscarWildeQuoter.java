@@ -45,5 +45,11 @@ public class OscarWildeQuoter {
         return quotes;
     }
 
+    public List<Quote> getQuotesBySearchTerm(String searchTerm){
+        List<Quote> quotes = new ArrayList<>();
+        repository.findAllByQuoteContaining(searchTerm).forEach(quotes::add);
+        return quotes;
+    }
+
 
 }
