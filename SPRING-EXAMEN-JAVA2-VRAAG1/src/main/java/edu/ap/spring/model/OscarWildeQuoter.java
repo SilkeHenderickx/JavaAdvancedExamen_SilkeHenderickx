@@ -22,8 +22,10 @@ public class OscarWildeQuoter {
     private List<String> readWords(Scanner source) {
         String word = null;
         List<String> words = new ArrayList<>();
-        while (!(word = source.nextLine()).isEmpty()) {
+        while (source.hasNextLine()) {
+            word = source.nextLine();
             words.add(word);
+            System.out.println(word);
         }
         return words;
     }
