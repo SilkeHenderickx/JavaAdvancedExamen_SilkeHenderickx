@@ -39,5 +39,11 @@ public class OscarWildeQuoter {
 
     }
 
+    public List<Quote> getQuotes(){
+        List<Quote> quotes = new ArrayList<>();
+        repository.findAll().forEach(quotes::add);
+        return quotes;
+    }
+
 
 }
